@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+.navegacion {
+    position: fixed;
+    background-color: #2196f3;
+    transition: .5s;
+    z-index: 10000;
+    overflow: hidden;
+    top: 50px;
+    right: 50px;
+    height: 50px;
+    width: 250px;
+}
+
+.navegacion.active {
+    height: 350px;
+}
+
+.navegacion .toggle {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background-color: #2196f3;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 20px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.navegacion .toggle:before {
+    content: 'Menu';
+    margin-right: 10px;
+}
+
+.navegacion .toggle.active:before {
+    content: 'Close';
+    margin-right: 10px;
+}
+
+.navegacion .toggle span {
+    position: relative;
+    width: 20px;
+    height: 50px;
+}
+
+.navegacion .toggle span::before {
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    transition: .5s;
+}
+
+.navegacion .toggle span::after {
+    content: '';
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    transition: .5s;
+}
+
+.navegacion .toggle.active span::before {
+    transform: rotate(225deg);
+    top: 24px;
+}
+
+.navegacion .toggle.active span::after {
+    transform: rotate(135deg);
+    bottom: 24px;
+}
+
+.navegacion ul {
+    position: relative;
+    background-color: #111;
+}
+
+.navegacion ul li {
+    list-style: none;
+}
+
+.navegacion ul li a {
+    position: relative;
+    text-decoration: none;
+    display: block;
+    padding: 10px 20px;
+    height: 50px;
+    color: #fff;
+    font-size: 18px;
+    transition: 1s;
+}
+
+.navegacion ul li a:hover {
+    transition: 0s;
+    background-color: #2196f3;
+}
+
+section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e3f2fd;
+}
+
+section h2 {
+    font-size: 12vw;
+    color: rgba(33, 150, 243, .2);
+}
